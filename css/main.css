@@ -1,0 +1,50 @@
+#viewport {
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    background: #ddd;
+}
+
+#map {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 3200px;
+    height: 3200px;
+    transition: all .2s ease;
+    background: url("../media/pattern.png");
+}
+
+#map:after {
+    clear: both;
+    display: table;
+    content: '';
+}
+
+@keyframes play {
+    100% {
+        background-position-x: 100px;
+    }
+}
+
+#player1 {
+    width: 100px;
+    height: 120px;
+    background: url(../media/sprite.png) right;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-position-y: 120px;
+    border: transparent;
+    transform: translate(-50%, -50%);
+}
+
+.move {
+    animation: play 0.5s steps(4) infinite;
+}
+
